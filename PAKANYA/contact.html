@@ -1,0 +1,249 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PAKANYA COFFEE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <h1>PAKANYA COFFEE</h1>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="https://wa.me/256786057052" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Order Now
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with PAKANYA COFFEE - We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions about our coffee? Want to place an order? Reach out to us through any of these channels.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+256 751 464 124</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>WhatsApp Ordering</h3>
+                                <p>+256 786 057 052</p>
+                                <a href="https://wa.me/256786057052" class="btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>pakanyacoffee@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Visit Our Location</h3>
+                                <p>Kiyonga parish, Kasambya county<br>
+                                   Buhekura - MUBENDE<br>
+                                   UGANDA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h3>Business Hours</h3>
+                        <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                        <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
+                        <p><strong>Sunday:</strong> Closed</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="wholesale">Wholesale/Bulk Orders</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="feedback">Product Feedback</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <p class="form-note">* This form sends an email to pakanyacoffee@gmail.com</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="location">
+        <div class="container">
+            <h2 class="section-title">Our Location</h2>
+            <div class="map-placeholder">
+                <div class="map-content">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Mubende, Uganda</h3>
+                    <p>Kiyonga parish, Kasambya county, Buhekura</p>
+                    <p>Located on the Buhekuna Plateau</p>
+                    <a href="https://maps.google.com/?q=Kiyonga+parish,+Kasambya+county,+Buhekura,+Mubende,+Uganda" 
+                       class="btn-outline" target="_blank">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+            
+            <div class="location-info">
+                <div class="location-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Delivery Information</h3>
+                    <p>We deliver nationwide across Uganda. Contact us for delivery rates and estimated times.</p>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-box"></i>
+                    <h3>Pickup Available</h3>
+                    <p>Local customers can arrange pickup from our Mubende location.</p>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Export Inquiries</h3>
+                    <p>Interested in exporting PAKANYA COFFEE? Contact us for wholesale rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I place an order?</h3>
+                    <p>You can order directly through WhatsApp (+256 786 057 052) or by calling +256 751 464 124. You can also use the contact form on this page.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept mobile money (MTN, Airtel), bank transfers, and cash on delivery for local orders.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you deliver outside Mubende?</h3>
+                    <p>Yes, we deliver nationwide across Uganda. Delivery charges vary based on location.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How should I store PAKANYA COFFEE?</h3>
+                    <p>Store in a cool, dry place away from direct sunlight. For best freshness, use within 3 months of opening.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PAKANYA COFFEE</h3>
+                    <p>Heritage Coffee from the Heart of Mubende. Organically grown using cattle manure from the Buhekuna Plateau.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Products</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +256 751 464 124</p>
+                    <p><i class="fab fa-whatsapp"></i> +256 786 057 052</p>
+                    <p><i class="fas fa-envelope"></i> pakanyacoffee@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kiyonga parish, Kasambya county, Buhekura - MUBENDE</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/256786057052" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PAKANYA ENTERPRISES LIMITED. All rights reserved. | PRODUCT OF UGANDA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
