@@ -1,4 +1,3 @@
-<!-- menu.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,102 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ADDITIONAL CSS FOR DUAL PRICING */
+        .price-container {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .retail-price, .wholesale-price {
+            flex: 1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 140px;
+        }
+        
+        .retail-price {
+            background: #f8f8f8;
+            border: 2px solid #ddd;
+        }
+        
+        .wholesale-price.featured {
+            background: #FFF9E6;
+            border: 2px solid #FFD700;
+            position: relative;
+        }
+        
+        .wholesale-price.featured::before {
+            content: "💼 WHOLESALE";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FFD700;
+            color: #333;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .retail-price small, .wholesale-price small {
+            display: block;
+            color: #666;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .price-container .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #5D4037;
+            display: block;
+        }
+        
+        .unit {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .savings {
+            display: inline-block;
+            background: #388E3C;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        .bulk-order-note {
+            background: #F5E9D9;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3E2723;
+        }
+        
+        .bulk-order-note h4 {
+            color: #5D4037;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .price-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .retail-price, .wholesale-price {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -38,20 +133,38 @@
         <div class="container">
             <h1>Our Coffee Products</h1>
             <p>100% Pure Robusta Coffee • Organically Grown • Medium Roast • Fine Grind</p>
+            <div class="bulk-order-note">
+                <h4><i class="fas fa-building"></i> Bulk Order Discounts Available</h4>
+                <p>Order 50+ packs for wholesale pricing. Contact us for custom bulk orders and café partnerships.</p>
+            </div>
         </div>
     </section>
 
     <!-- Products -->
     <section class="products">
         <div class="container">
+            <!-- 15g Package -->
             <div class="product-detail">
                 <div class="product-image">
                     <img src="assets/package-15g.jpg" alt="15gms Package">
                 </div>
                 <div class="product-info">
-                    <span class="product-label">Small Pack</span>
+                    <span class="product-label">Trial Size</span>
                     <h2>PAKANYA COFFEE - 15gms Package</h2>
-                    <p class="price">UGX 3,000</p>
+                    
+                    <!-- DUAL PRICING -->
+                    <div class="price-container">
+                        <div class="retail-price">
+                            <small>Retail Price</small>
+                            <span class="price">UGX 1,000</span>
+                            <span class="unit">per pack</span>
+                        </div>
+                        <div class="wholesale-price featured">
+                            <small>Wholesale (50+ packs)</small>
+                            <span class="price">UGX 500</span>
+                            <span class="savings">Save 50%</span>
+                        </div>
+                    </div>
                     
                     <div class="product-features">
                         <h3>Features:</h3>
@@ -66,7 +179,7 @@
                     </div>
                     
                     <div class="product-actions">
-                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20the%2015gms%20Pakanya%20Coffee%20package" 
+                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20PAKANYA%20COFFEE%2015g%20package%20-%20Retail:%20UGX%201,000%20|%20Wholesale:%20UGX%20500" 
                            class="btn-primary" target="_blank">
                             <i class="fab fa-whatsapp"></i> Order on WhatsApp
                         </a>
@@ -74,6 +187,7 @@
                 </div>
             </div>
 
+            <!-- 100g Package -->
             <div class="product-detail reverse">
                 <div class="product-image">
                     <img src="assets/package-100g.jpg" alt="100gms Package">
@@ -81,7 +195,20 @@
                 <div class="product-info">
                     <span class="product-label">Best Value</span>
                     <h2>PAKANYA COFFEE - 100gms Package</h2>
-                    <p class="price">UGX 15,000</p>
+                    
+                    <!-- DUAL PRICING -->
+                    <div class="price-container">
+                        <div class="retail-price">
+                            <small>Retail Price</small>
+                            <span class="price">UGX 4,000</span>
+                            <span class="unit">per pack</span>
+                        </div>
+                        <div class="wholesale-price featured">
+                            <small>Wholesale (50+ packs)</small>
+                            <span class="price">UGX 3,000</span>
+                            <span class="savings">Save 25%</span>
+                        </div>
+                    </div>
                     
                     <div class="product-features">
                         <h3>Features:</h3>
@@ -96,7 +223,7 @@
                     </div>
                     
                     <div class="product-actions">
-                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20the%20100gms%20Pakanya%20Coffee%20package" 
+                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20PAKANYA%20COFFEE%20100g%20package%20-%20Retail:%20UGX%204,000%20|%20Wholesale:%20UGX%203,000" 
                            class="btn-primary" target="_blank">
                             <i class="fab fa-whatsapp"></i> Order on WhatsApp
                         </a>
@@ -104,14 +231,28 @@
                 </div>
             </div>
 
+            <!-- 250g Package -->
             <div class="product-detail">
                 <div class="product-image">
-                    <img src="assets/package-200g.jpg" alt="200gms Package">
+                    <img src="assets/package-200g.jpg" alt="250gms Package">
                 </div>
                 <div class="product-info">
                     <span class="product-label">Family Size</span>
-                    <h2>PAKANYA COFFEE - 200gms Package</h2>
-                    <p class="price">UGX 28,000</p>
+                    <h2>PAKANYA COFFEE - 250gms Package</h2>
+                    
+                    <!-- DUAL PRICING -->
+                    <div class="price-container">
+                        <div class="retail-price">
+                            <small>Retail Price</small>
+                            <span class="price">UGX 10,000</span>
+                            <span class="unit">per pack</span>
+                        </div>
+                        <div class="wholesale-price featured">
+                            <small>Wholesale (50+ packs)</small>
+                            <span class="price">UGX 7,500</span>
+                            <span class="savings">Save 25%</span>
+                        </div>
+                    </div>
                     
                     <div class="product-features">
                         <h3>Features:</h3>
@@ -126,7 +267,97 @@
                     </div>
                     
                     <div class="product-actions">
-                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20the%20200gms%20Pakanya%20Coffee%20package" 
+                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20PAKANYA%20COFFEE%20250g%20package%20-%20Retail:%20UGX%2010,000%20|%20Wholesale:%20UGX%207,500" 
+                           class="btn-primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 500g Package -->
+            <div class="product-detail reverse">
+                <div class="product-image">
+                    <!-- NOTE: You need to create package-500g.jpg image -->
+                    <img src="assets/package-200g.jpg" alt="500gms Package">
+                </div>
+                <div class="product-info">
+                    <span class="product-label">Café Size</span>
+                    <h2>PAKANYA COFFEE - 500gms Package</h2>
+                    
+                    <!-- DUAL PRICING -->
+                    <div class="price-container">
+                        <div class="retail-price">
+                            <small>Retail Price</small>
+                            <span class="price">UGX 18,000</span>
+                            <span class="unit">per pack</span>
+                        </div>
+                        <div class="wholesale-price featured">
+                            <small>Wholesale (20+ packs)</small>
+                            <span class="price">UGX 15,000</span>
+                            <span class="savings">Save 17%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-features">
+                        <h3>Features:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Medium Roast, Fine Grind</li>
+                            <li><i class="fas fa-check-circle"></i> Organically grown using Cattle Manure</li>
+                            <li><i class="fas fa-check-circle"></i> From Buhekuna Plateau - Mubende</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Pure Robusta Coffee</li>
+                            <li><i class="fas fa-check-circle"></i> Sun-dried naturally</li>
+                            <li><i class="fas fa-check-circle"></i> Ideal for coffee shops & restaurants</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20PAKANYA%20COFFEE%20500g%20package%20-%20Retail:%20UGX%2018,000%20|%20Wholesale:%20UGX%2015,000" 
+                           class="btn-primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1000g Package -->
+            <div class="product-detail">
+                <div class="product-image">
+                    <!-- NOTE: You need to create package-1000g.jpg image -->
+                    <img src="assets/package-200g.jpg" alt="1000gms Package">
+                </div>
+                <div class="product-info">
+                    <span class="product-label">Business Size</span>
+                    <h2>PAKANYA COFFEE - 1000gms (1kg) Package</h2>
+                    
+                    <!-- DUAL PRICING -->
+                    <div class="price-container">
+                        <div class="retail-price">
+                            <small>Retail Price</small>
+                            <span class="price">UGX 35,000</span>
+                            <span class="unit">per pack</span>
+                        </div>
+                        <div class="wholesale-price featured">
+                            <small>Wholesale (10+ packs)</small>
+                            <span class="price">UGX 30,000</span>
+                            <span class="savings">Save 14%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-features">
+                        <h3>Features:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Medium Roast, Fine Grind</li>
+                            <li><i class="fas fa-check-circle"></i> Organically grown using Cattle Manure</li>
+                            <li><i class="fas fa-check-circle"></i> From Buhekuna Plateau - Mubende</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Pure Robusta Coffee</li>
+                            <li><i class="fas fa-check-circle"></i> Sun-dried naturally</li>
+                            <li><i class="fas fa-check-circle"></i> Perfect for hotels & large establishments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <a href="https://wa.me/256786057052?text=I%20want%20to%20order%20PAKANYA%20COFFEE%201000g%20(1kg)%20package%20-%20Retail:%20UGX%2035,000%20|%20Wholesale:%20UGX%2030,000" 
                            class="btn-primary" target="_blank">
                             <i class="fab fa-whatsapp"></i> Order on WhatsApp
                         </a>
@@ -136,8 +367,45 @@
         </div>
     </section>
 
-    <!-- Brewing Tips -->
+    <!-- Bulk Order Info -->
     <section class="brewing-tips">
+        <div class="container">
+            <h2 class="section-title">Bulk Order Benefits</h2>
+            <div class="tips-grid">
+                <div class="tip">
+                    <i class="fas fa-percentage"></i>
+                    <h3>Volume Discounts</h3>
+                    <p>Save 14-50% when ordering wholesale quantities</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-truck"></i>
+                    <h3>Free Delivery</h3>
+                    <p>Free delivery in Mubende for orders over UGX 100,000</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Business Support</h3>
+                    <p>Dedicated account manager for wholesale clients</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Regular Supply</h3>
+                    <p>Set up recurring orders for consistent supply</p>
+                </div>
+            </div>
+            
+            <div class="bulk-inquiry" style="text-align: center; margin-top: 40px;">
+                <h3>Custom Bulk Orders?</h3>
+                <p>Need larger quantities or custom packaging for your business?</p>
+                <a href="contact.html" class="btn-primary" style="margin-top: 15px;">
+                    <i class="fas fa-file-contract"></i> Request Custom Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brewing Tips -->
+    <section class="brewing-tips" style="background-color: #f9f9f9;">
         <div class="container">
             <h2 class="section-title">Brewing Recommendations</h2>
             <div class="tips-grid">

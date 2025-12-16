@@ -999,3 +999,42 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+/*updates*/
+.gallery-item { background: red !important; }
+.gallery-item img { opacity: 1 !important; display: block !important; }
+
+.philosophy-image { 
+    height: 400px !important;
+}
+.philosophy-image img { 
+    opacity: 1 !important;
+    display: block !important;
+}
+
+
+
+
+
+
+.product-image { 
+    height: 300px !important; 
+    overflow: hidden !important;
+}
+.product-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+
+
+
+
+
