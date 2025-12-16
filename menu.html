@@ -474,5 +474,31 @@
     </footer>
 
     <script src="js/script.js"></script>
+<script>
+    // Debug script for product images
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("=== PRODUCT IMAGE DEBUG ===");
+        
+        const productImages = document.querySelectorAll('.product-image img');
+        productImages.forEach((img, index) => {
+            console.log(`Image ${index + 1}:`, img.src);
+            console.log(`- Complete:`, img.complete);
+            console.log(`- Natural size:`, img.naturalWidth, 'x', img.naturalHeight);
+            console.log(`- Display size:`, img.offsetWidth, 'x', img.offsetHeight);
+            
+            // Force display
+            img.style.opacity = '1';
+            img.style.visibility = 'visible';
+            img.style.display = 'block';
+        });
+        
+        // Check parent containers
+        document.querySelectorAll('.product-image').forEach(container => {
+            console.log("Container height:", container.offsetHeight);
+            container.style.minHeight = '400px';
+        });
+    });
+</script>
+
 </body>
 </html>
